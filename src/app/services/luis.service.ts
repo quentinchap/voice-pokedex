@@ -7,8 +7,11 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class LuisService {
 
+  key: string = "b31ea8ef-cb14-4e04-9885-c17126be608d";
+  subscriptionKey: string ="test";
 
-  urlApi: string = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/73fd3250-a8c1-4a30-a3ac-840d3ff9f2d7?subscription-key=e1ec91e58eae4828bba6ac2fcec27f09&verbose=true&q=";
+
+  urlApi: string = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/"+this.key+"?subscription-key="+this.subscriptionKey+"&verbose=true&q=";
 
   constructor(public http:Http) { }
 
