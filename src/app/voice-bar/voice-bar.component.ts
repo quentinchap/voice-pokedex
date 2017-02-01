@@ -1,15 +1,14 @@
 import { Component, OnInit, Output } from '@angular/core';
-
+import { SpeechToTextService } from '../services/bing-speech.service';
+import { LuisService } from '../services/luis.service';
 import { MicroService } from '../services/micro.service';
 
-import { SpeechToTextService } from '../services/speech-to-text.service';
-import { LuisService } from '../services/luis.service';
+
 
 @Component({
   selector: 'app-voice-bar',
   templateUrl: './voice-bar.component.html',
   styleUrls: ['./voice-bar.component.css'],
-  providers: [MicroService, SpeechToTextService, LuisService]
 })
 export class VoiceBarComponent implements OnInit {
 
