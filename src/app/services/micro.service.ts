@@ -23,13 +23,11 @@ export class MicroService {
     });
   }
 
-
-
   startRecording() {
     let vm = this;
     console.log("start audio record");
     this.getAudioPermission()
-      .then(stream =>  {
+      .then(stream => {
         this.recorder = new RecordRTC(stream, {
           type: 'audio',
           numberOfAudioChannels: 1
@@ -43,7 +41,7 @@ export class MicroService {
 
   stopRecording() {
     let vm = this;
-    
+
     return new Promise((resolve, reject) => {
       this.recorder.stopRecording(function () {
         vm.recording = false;
