@@ -42,7 +42,7 @@ export class VoiceBarComponent implements OnInit {
 
     if (this.recording) {
       this.recording = false;
-      this.microService.stopRecording().then(res => {/*this.speechToTextService.getTextFromAudio(res).subscribe(res => this.getLuisReturn(res))*/
+      this.microService.stopRecording().then(res => {this.speechToTextService.getTextFromAudio(res).subscribe(res => this.getLuisReturn(res))
       });
     }
   }
